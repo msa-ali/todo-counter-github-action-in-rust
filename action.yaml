@@ -1,0 +1,5 @@
+name: Left TODO
+description: "Count the TODOs left in your codebase"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
