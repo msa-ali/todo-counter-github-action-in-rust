@@ -2,6 +2,15 @@ name: Development
 
 on:
   workflow_dispatch:
+       inputs:
+         dir:
+            description: "Path to subdirectory to scan"
+            type: string
+            default: ""
+         summary:
+            description: "Generate job summary"
+            type: boolean
+            default: false 
     
 jobs:
   test:

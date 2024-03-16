@@ -1,5 +1,17 @@
 name: Left TODO
 description: "Count the TODOs left in your codebase"
+inputs:
+  dir:
+    description: 'Path to subdirectory to scan'
+  summary:
+    description: 'Write report to step summary if `true`'
+    default: 'false'
+outputs:
+  count:
+    description: 'Number of TODOs found'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - "--dir=${{ inputs.dir }}" 
+    - "--summary=${{ inputs.summary }}" 
